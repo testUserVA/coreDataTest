@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0037FB271EAF80CD00DAD86D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 0037FB261EAF80CD00DAD86D /* Models */; };
 		003D33BF1EAE13C200E2C263 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33BE1EAE13C200E2C263 /* main.m */; };
 		003D33C21EAE13C200E2C263 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33C11EAE13C200E2C263 /* AppDelegate.m */; };
 		003D33C51EAE13C200E2C263 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33C41EAE13C200E2C263 /* ViewController.m */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0037FB261EAF80CD00DAD86D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		003D33BA1EAE13C200E2C263 /* CoreDataLedocAsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataLedocAsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		003D33BE1EAE13C200E2C263 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		003D33C01EAE13C200E2C263 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		003D33BC1EAE13C200E2C263 /* CoreDataLedocAsync */ = {
 			isa = PBXGroup;
 			children = (
+				0037FB261EAF80CD00DAD86D /* Models */,
 				003D33C01EAE13C200E2C263 /* AppDelegate.h */,
 				003D33C11EAE13C200E2C263 /* AppDelegate.m */,
 				003D33C31EAE13C200E2C263 /* ViewController.h */,
@@ -271,6 +274,7 @@
 			files = (
 				003D33D01EAE13C200E2C263 /* LaunchScreen.storyboard in Resources */,
 				003D33CD1EAE13C200E2C263 /* Assets.xcassets in Resources */,
+				0037FB271EAF80CD00DAD86D /* Models in Resources */,
 				003D33C81EAE13C200E2C263 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PATH=${PATH}:/usr/local/bin\ncd \"${PROJECT_DIR}/MyApp\"\nmogenerator --human-dir Classes --machine-dir MOGenerated --model MyApp.xcdatamodeld/MyApp.xcdatamodel --template-var arc=true";
+			shellScript = "mogenerator -m \"CoreDataLedocAsync/CoreDataLedocAsync.xcdatamodeld/CoreDataLedocAsync.xcdatamodel\" -O Models --template-var arc=true";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -583,6 +587,7 @@
 				003D33FB1EAF4B0E00E2C263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
