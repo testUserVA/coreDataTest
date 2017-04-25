@@ -1,4 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15G31" minimumToolsVersion="Automatic">
+    <entity name="EquipmentEntry" syncable="YES">
+        <attribute name="archived" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="authenticationType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="borrowerFullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="canBeLendAcrossLocations" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="equId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="frequency" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isResponsible" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastEdit" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastReview" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="loanComment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loanDeadline" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="loaner" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="loanLocation" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="loanLocationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="mainID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="manualId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="monitoring" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="nextReview" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="objectStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="photoId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="purchaseDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="quickReview" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="readyToLoan" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="readyToUse" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="responsible" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responsibleFullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reviewed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="reviewStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reviewTemplateId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="serialNumber" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="shouldBeInspected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="supplier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="supplierName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+     <entity name="DeviationBasicInfoRest" representedClassName="DeviationBasicInfoRest" isAbstract="YES" syncable="YES">
+        <attribute name="acceptingEmployeeId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="deadlineDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deviationCategory" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="deviationID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="deviationStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="deviationType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isMonitored" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="previewImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="reportedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="responsibleEmployee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="DeviationDetailsRest" representedClassName="DeviationDetailsRest" parentEntity="DeviationBasicInfoRest" syncable="YES">
+        <attribute name="cause" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="howToPrevent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationRestIdList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="photoId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="recommendedSolution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="searchableLocationRestIdList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spentMoney" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="spentTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supplier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="whatHappened" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DocumentBasicInfoEntry" representedClassName="DocumentBasicInfoEntry" isAbstract="YES" syncable="YES">
+        <attribute name="additionalDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="documentId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="documentParentId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="documentStatusId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="documentTypeId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="frequencyId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isLinkToTheShop" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isMonitored" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationsNamesSeparatedByComa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationsStringList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="manualId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ownerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="physicalLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="searchableLocationsNamesSeparatedByComa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shouldBeInspected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="subcategoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tradesStringList" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DocumentDetailsEntry" representedClassName="DocumentDetailsEntry" parentEntity="DocumentBasicInfoEntry" syncable="YES">
+        <attribute name="changeSummary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastReview" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nextReview" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="reviewStatus" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="scopeId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uploadedById" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="versionNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EquipmentEntry" positionX="-54" positionY="-9" width="128" height="60"/>
+    </elements>
 </model>
