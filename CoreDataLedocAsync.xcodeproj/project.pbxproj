@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		0037FB271EAF80CD00DAD86D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 0037FB261EAF80CD00DAD86D /* Models */; };
+		0037FB2B1EAF834C00DAD86D /* AFNetworking in Resources */ = {isa = PBXBuildFile; fileRef = 0037FB2A1EAF834C00DAD86D /* AFNetworking */; };
 		003D33BF1EAE13C200E2C263 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33BE1EAE13C200E2C263 /* main.m */; };
 		003D33C21EAE13C200E2C263 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33C11EAE13C200E2C263 /* AppDelegate.m */; };
 		003D33C51EAE13C200E2C263 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33C41EAE13C200E2C263 /* ViewController.m */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0037FB261EAF80CD00DAD86D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		0037FB2A1EAF834C00DAD86D /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFNetworking; sourceTree = "<group>"; };
 		003D33BA1EAE13C200E2C263 /* CoreDataLedocAsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataLedocAsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		003D33BE1EAE13C200E2C263 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		003D33C01EAE13C200E2C263 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,9 +101,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0037FB291EAF832800DAD86D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0037FB2A1EAF834C00DAD86D /* AFNetworking */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		003D33B11EAE13C200E2C263 = {
 			isa = PBXGroup;
 			children = (
+				0037FB291EAF832800DAD86D /* Libraries */,
 				003D33BC1EAE13C200E2C263 /* CoreDataLedocAsync */,
 				003D33D91EAE13C200E2C263 /* CoreDataLedocAsyncTests */,
 				003D33E41EAE13C200E2C263 /* CoreDataLedocAsyncUITests */,
@@ -275,6 +286,7 @@
 				003D33D01EAE13C200E2C263 /* LaunchScreen.storyboard in Resources */,
 				003D33CD1EAE13C200E2C263 /* Assets.xcassets in Resources */,
 				0037FB271EAF80CD00DAD86D /* Models in Resources */,
+				0037FB2B1EAF834C00DAD86D /* AFNetworking in Resources */,
 				003D33C81EAE13C200E2C263 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
