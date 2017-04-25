@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		003D33F91EAF4B0E00E2C263 /* Monogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 003D33FC1EAF4B0E00E2C263 /* Build configuration list for PBXAggregateTarget "Monogenerator" */;
+			buildPhases = (
+				003D33FD1EAF4B4700E2C263 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Monogenerator;
+			productName = Monogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		003D33BF1EAE13C200E2C263 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33BE1EAE13C200E2C263 /* main.m */; };
 		003D33C21EAE13C200E2C263 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 003D33C11EAE13C200E2C263 /* AppDelegate.m */; };
@@ -224,6 +238,9 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 003D33B91EAE13C200E2C263;
 					};
+					003D33F91EAF4B0E00E2C263 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = 003D33B51EAE13C200E2C263 /* Build configuration list for PBXProject "CoreDataLedocAsync" */;
@@ -242,6 +259,7 @@
 				003D33B91EAE13C200E2C263 /* CoreDataLedocAsync */,
 				003D33D51EAE13C200E2C263 /* CoreDataLedocAsyncTests */,
 				003D33E01EAE13C200E2C263 /* CoreDataLedocAsyncUITests */,
+				003D33F91EAF4B0E00E2C263 /* Monogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +290,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003D33FD1EAF4B4700E2C263 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:/usr/local/bin\ncd \"${PROJECT_DIR}/MyApp\"\nmogenerator --human-dir Classes --machine-dir MOGenerated --model MyApp.xcdatamodeld/MyApp.xcdatamodel --template-var arc=true";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		003D33B61EAE13C200E2C263 /* Sources */ = {
@@ -489,6 +523,20 @@
 			};
 			name = Release;
 		};
+		003D33FA1EAF4B0E00E2C263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		003D33FB1EAF4B0E00E2C263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +556,7 @@
 				003D33EC1EAE13C200E2C263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		003D33ED1EAE13C200E2C263 /* Build configuration list for PBXNativeTarget "CoreDataLedocAsyncTests" */ = {
 			isa = XCConfigurationList;
@@ -516,12 +565,22 @@
 				003D33EF1EAE13C200E2C263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		003D33F01EAE13C200E2C263 /* Build configuration list for PBXNativeTarget "CoreDataLedocAsyncUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				003D33F11EAE13C200E2C263 /* Debug */,
 				003D33F21EAE13C200E2C263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		003D33FC1EAF4B0E00E2C263 /* Build configuration list for PBXAggregateTarget "Monogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				003D33FA1EAF4B0E00E2C263 /* Debug */,
+				003D33FB1EAF4B0E00E2C263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
