@@ -1,5 +1,5 @@
 #import "_DeviationBasicInfoRest.h"
 
-@interface DeviationBasicInfoRest : _DeviationBasicInfoRest
-// Custom logic goes here.
+@interface DeviationBasicInfoRest : _DeviationBasicInfoRest {}
+
 @end

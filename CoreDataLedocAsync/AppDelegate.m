@@ -122,6 +122,16 @@
     return _managedObjectContext;
 }
 
+- (void)lock
+{
+    [self.persistentStoreCoordinator lock];
+}
+
+- (void)unlock
+{
+    [self.persistentStoreCoordinator unlock];
+}
+
 #pragma mark - Core Data Saving support
 
 - (void)saveContext {

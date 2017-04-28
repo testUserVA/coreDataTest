@@ -1,5 +1,5 @@
 #import "_DocumentBasicInfoEntry.h"
 
-@interface DocumentBasicInfoEntry : _DocumentBasicInfoEntry
-// Custom logic goes here.
+@interface DocumentBasicInfoEntry : _DocumentBasicInfoEntry {}
+
 @end

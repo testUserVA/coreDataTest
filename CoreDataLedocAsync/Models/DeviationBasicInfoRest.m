@@ -1,4 +1,5 @@
 #import "DeviationBasicInfoRest.h"
+#import "DatabaseUtils.h"
 
 @interface DeviationBasicInfoRest ()
 
@@ -8,6 +9,5 @@
 
 @implementation DeviationBasicInfoRest
 
-// Custom logic goes here.
-
 @end
+

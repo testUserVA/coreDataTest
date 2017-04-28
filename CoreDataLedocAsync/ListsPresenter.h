@@ -14,7 +14,7 @@
 
 @protocol ListsViewPresenter <NSObject>
 - (instancetype)initWithListView:(id<ListView>)listView equipmentList:(NSArray *)equipmentList;
-- (void)loginAndDownload;
+- (void)loginAndDownload:(NSString *)username withPassword:(NSString *)password;
 - (void)reset;
 @end
 

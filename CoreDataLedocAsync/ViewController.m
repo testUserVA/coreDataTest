@@ -19,7 +19,8 @@
 @implementation ViewController
 
 - (IBAction)didTapLoginAndDownloadButton:(id)sender {
-    [self.presenter loginAndDownload];
+    [self.presenter loginAndDownload:self.loginTextField.text
+                        withPassword:self.passwordTextField.text];
 }
 
 - (IBAction)didTapResetButton:(id)sender {
@@ -34,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.loginTextField.text = @"anders.demant@eltelnetworks.com";
+    self.passwordTextField.text = @"asdasd";
 }
 
 @end
